@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="The Comfort Zone Salon - Beauty Salon in Hartlepool combining some of the world's finest products and treatments with heated beds, soothing music and essential oil soaked hot towels and highly trained (Seaham Hall) therapists." />
+    <meta name="keywords" content="beauty salon, facials, body treatments, Hartlepool" />
+
+    <title>@ViewData["Title"] - The Comfort Zone Salon</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/twitter-bootstrap/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+              integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+              crossorigin="anonymous"
+              asp-fallback-href="~/lib/font-awesome/css/all.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+</head>
+<body>
+    <div class="container header-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 card justify-content-end TopAddress d-none d-lg-flex">
+                    <a href="https://goo.gl/maps/ujxbecaRC9L2" target="_blank" rel="noopener"><i class="fas fa-map-pin"></i> 91 Park Road Hartlepool TS26 9HP</a>
+                </div>
+                <div class="col-lg">
+                    <a asp-page="/">
+                        <img src="~/images/TheComfortZoneLogo.png" class="img-fluid mx-auto d-block" alt="The Comfort Zone Salon">
+                    </a>
+                </div>
+                <div class="col-lg-3 card justify-content-end text-right TopTel d-none d-lg-flex">
+                    <a href="tel:01429 287620"><i class="fas fa-phone"></i> 01429 287620</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col TopAddress d-lg-none">
+                    <a href="https://goo.gl/maps/ujxbecaRC9L2" target="_blank" rel="noopener"><i class="fas fa-map-pin"></i> 91 Park Road Hartlepool TS26 9HP</a>
+                </div>
+                <div class="col TopTel text-right d-lg-none">
+                    <a href="tel:01429 287620" target="_blank" rel="noopener"><i class="fas fa-phone"></i> 01429 287620</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <nav class="navbar navbar-light navbar-expand-md navbar-toggleable-md navbar-dark bg-dark sticky-top">
+        <div class="container TopNav">
+            <a href="/" class="navbar-brand d-flex w-50 mr-auto"></a>
+            @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>*@
+            <div class="navbar-toggler">
+
+                <a class="nav-link text-light" href="~/downloads/ComfortZoneSalonPriceList.pdf" target="_blank" rel="noopener">
+                    <i class="far fa-file-pdf"></i> View our treatments and price list here
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse w-100" id=".navbar-collapse">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="~/downloads/ComfortZoneSalonPriceList.pdf" target="_blank" rel="noopener">
+                            <i class="far fa-file-pdf"></i> View our treatments and price list here
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="https://www.facebook.com/pages/The-Comfort-Zone-Hartlepool/180521865293116" title="Visit our Facebook page" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="https://mobile.twitter.com/TheComfortZone9" title="Visit our Twitter page" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="https://instagram.com/TheComfortZone" title="Visit our Instagram page" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @*<partial name="_CookieConsentPartial" />*@
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-muted">
+        <div class="container text-center">
+            &copy; 2018 - The Comfort Zone Salon
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
